@@ -22,7 +22,7 @@
   yum:
       name: "{{ item.value.name }}" 
   loop:
-      "{{ lookup('dict',softwares) }}"
+      "{{ lookup('dict',softwares_rhel) }}"
 
 - name: "Starting jenkins"
   service:

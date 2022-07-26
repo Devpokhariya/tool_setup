@@ -1,0 +1,6 @@
+---
+- name: Install in RHEL8
+  roles:
+    - role: jenkins
+  hosts: aws
+  become: yes

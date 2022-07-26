@@ -2,6 +2,7 @@
 # vars file for jenkins
 java: "java-1.8.0"
 javaU: "openjdk-8-jre-headless"
+java_rhel: "java-11-openjdk-devel"
 reposU:
  jenkins:
     name: "Jenkins"
@@ -21,6 +22,12 @@ repos:
 softwaresU:
  java:
     name: "{{ javaU }}"
+ jenkins:
+    name: "jenkins"
+
+softwares_rhel:
+ java:
+    name: "{{ java_rhel }}"
  jenkins:
     name: "jenkins"
 
