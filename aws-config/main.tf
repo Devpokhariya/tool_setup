@@ -1,14 +1,13 @@
 provider "aws" {
   region  = var.region
-  version = "~> 3.0"
   profile = "default"
 }
 
 
 resource "aws_config_configuration_recorder_status" "test-recorder-status" {
-  name       = aws_config_configuration_recorder.test-recorder-status.name
+  name       = aws_config_configuration_recorder.aws-config-record-test.name
   is_enabled = true
-  depends_on = [aws_config_delivery_channel.test-recorder-status]
+  depends_on = [aws_config_delivery_channel.s3-delivery-channel]
 }
 
 resource "aws_iam_role_policy_attachment" "attach-test-role" {
@@ -20,13 +19,13 @@ resource "aws_s3_bucket" "sinc-prthap-vrf-tst" {
   bucket = "awsconfig-example-prathap-test"
 }
 
-resource "aws_config_delivery_channel" "foo" {
-  name           = "example"
+resource "aws_config_delivery_channel" "s3-delivery-channel" {
+  name           = "s3-delivery-channel-prathap"
   s3_bucket_name = aws_s3_bucket.sinc-prthap-vrf-tst.bucket
 }
 
-resource "aws_config_configuration_recorder" "foo" {
-  name     = "example"
+resource "aws_config_configuration_recorder" "aws-config-record-test" {
+  name     = "aws-config-record-test"
   role_arn = aws_iam_role.test-role-config.arn
 }
 
@@ -50,8 +49,8 @@ resource "aws_iam_role" "test-role-config" {
 POLICY
 }
 
-resource "aws_iam_role_policy" "p" {
-  name = "awsconfig-example"
+resource "aws_iam_role_policy" "aws-config-policy" {
+  name = "awsconfig-test-policy"
   role = aws_iam_role.test-role-config.id
 
   policy = <<POLICY
