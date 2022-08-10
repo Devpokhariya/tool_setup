@@ -5,14 +5,14 @@ provider "aws" {
 }
 
 
-resource "aws_config_configuration_recorder_status" "foo" {
-  name       = aws_config_configuration_recorder.foo.name
+resource "aws_config_configuration_recorder_status" "test-recorder-status" {
+  name       = aws_config_configuration_recorder.test-recorder-status.name
   is_enabled = true
-  depends_on = [aws_config_delivery_channel.foo]
+  depends_on = [aws_config_delivery_channel.test-recorder-status]
 }
 
-resource "aws_iam_role_policy_attachment" "a" {
-  role       = aws_iam_role.r.name
+resource "aws_iam_role_policy_attachment" "attach-test-role" {
+  role       = aws_iam_role.test-role-config.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSConfigRole"
 }
 
@@ -27,10 +27,10 @@ resource "aws_config_delivery_channel" "foo" {
 
 resource "aws_config_configuration_recorder" "foo" {
   name     = "example"
-  role_arn = aws_iam_role.r.arn
+  role_arn = aws_iam_role.test-role-config.arn
 }
 
-resource "aws_iam_role" "r" {
+resource "aws_iam_role" "test-role-config" {
   name = "example-awsconfig"
 
   assume_role_policy = <<POLICY
@@ -52,7 +52,7 @@ POLICY
 
 resource "aws_iam_role_policy" "p" {
   name = "awsconfig-example"
-  role = aws_iam_role.r.id
+  role = aws_iam_role.test-role-config.id
 
   policy = <<POLICY
 {
