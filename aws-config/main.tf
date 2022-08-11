@@ -17,6 +17,7 @@ resource "aws_iam_role_policy_attachment" "attach-test-role" {
 
 resource "aws_s3_bucket" "sinc-prthap-vrf-tst" {
   bucket = "awsconfig-example-prathap-test"
+  force_destroy = true
 }
 
 resource "aws_config_delivery_channel" "s3-delivery-channel" {
@@ -70,4 +71,15 @@ resource "aws_iam_role_policy" "aws-config-policy" {
   ]
 }
 POLICY
+}
+resource "aws_organizations_organization" "example" {
+  aws_service_access_principals = ["config-multiaccountsetup.amazonaws.com"]
+  feature_set                   = "ALL"
+}
+
+resource "aws_config_organization_managed_rule" "example" {
+  depends_on = [aws_organizations_organization.example]
+
+  name            = "example"
+  rule_identifier = "S3_BUCKET_LEVEL_PUBLIC_ACCESS_PROHIBITED"
 }
