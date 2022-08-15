@@ -29,7 +29,7 @@ aws-config/*.tfstate.*
 # .tfstate files
 *.tfstate
 *.tfstate.*
-
+terraform*
 # Crash log files
 crash.log
 crash.*.log
