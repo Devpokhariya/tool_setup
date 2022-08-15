@@ -25,7 +25,7 @@ aws-config/*.tfstate.*
 # information for Eclipse / Flash Builder.
 # Local .terraform directories
 **/.terraform/*
-
+.terraform
 # .tfstate files
 *.tfstate
 *.tfstate.*
