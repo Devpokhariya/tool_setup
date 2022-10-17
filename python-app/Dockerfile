@@ -13,7 +13,7 @@ ENV PYTHONUNBUFFERED 1
 # install dependencies
 RUN pip install --upgrade pip
 # copy project
-COPY src/ $MICRO_SERVICE
+ADD src/ $MICRO_SERVICE
 RUN pip install -r requirements.txt
 EXPOSE 8501
 CMD streamlit run app.py
