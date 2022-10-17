@@ -1,0 +1,32 @@
+1666032681524	geckodriver	INFO	Listening on 127.0.0.1:58387
+1666032681943	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "58388" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/b8/lxm3d52d7gv02n8z89n1793c0000gp/T/rust_mozprofileUFU1OJ"
+2022-10-18 00:21:25.159 plugin-container[15318:467245] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-18 00:21:25.183 plugin-container[15318:467245] nil host used in call to allowsAnyHTTPSCertificateForHost:
+WebDriver BiDi listening on ws://127.0.0.1:58388
+2022-10-18 00:21:25.306 plugin-container[15318:467245] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-18 00:21:25.306 plugin-container[15318:467245] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-18 00:21:25.306 plugin-container[15318:467243] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-18 00:21:25.306 plugin-container[15318:467243] nil host used in call to allowsAnyHTTPSCertificateForHost:
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://127.0.0.1:58388/devtools/browser/af7cb31e-4370-4547-b747-28df15e4f88a
+1666032689237	geckodriver	INFO	Listening on 127.0.0.1:58424
+1666032689329	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "58425" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/b8/lxm3d52d7gv02n8z89n1793c0000gp/T/rust_mozprofilewneTUH"
+2022-10-18 00:21:29.689 plugin-container[15351:467800] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-18 00:21:29.689 plugin-container[15351:467800] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1666032689691	Marionette	INFO	Marionette enabled
+1666032689717	Marionette	INFO	Listening on port 58454
+2022-10-18 00:21:29.722 plugin-container[15351:467800] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-18 00:21:29.722 plugin-container[15351:467800] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-18 00:21:29.722 plugin-container[15351:467834] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-18 00:21:29.722 plugin-container[15351:467834] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 58454
+WebDriver BiDi listening on ws://127.0.0.1:58425
+1666032689813	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/b8/lxm3d52d7gv02n8z89n1793c0000gp/T/rust_mozprofilewneTUH/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58425/devtools/browser/45fff89f-c448-4d54-a2ca-9b58b330afd3
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

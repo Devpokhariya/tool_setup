@@ -1,6 +1,10 @@
 import streamlit as st
 import os
 import time
+import urllib
+import urllib.request as urllib2
+
+
 # import everything from tkinter module
 from tkinter import *
 
@@ -8,11 +12,8 @@ from tkinter import *
 import tkinter.messagebox
 
 # create a tkinter root window
-root = tkinter.Tk()
 
-# root window title and dimension
-root.title("When you press a button the message will pop up")
-root.geometry('500x300')
+st.title("Move to Microsoft Teams")
 
 # Create a messagebox showinfo
 
@@ -25,29 +26,37 @@ def onClick():
 # Set the position of button on the top of window.
 # button.pack(side='bottom')
 # root.mainloop()
-
-st.header("Enter your Details below ")
 phone = st.text_input("Mobile Number +1-XX-XX-XXXX")
 sip_id = st.text_input("Sip Id")
 name = st.text_input("User Name")
+
 def load():
         with st.spinner('Wait for it...'):
             time.sleep(5)
         st.success('User have added in skype !', icon="✅")
-        
-def main():
    
-        # new_tranfer = TransferUser()
-        # print (phone)
+def main():
+
         os.system(" mv '{}' '{}' ".format(phone,sip_id,name))
         load()
 
 
-
-
 st.button(label="Submit",on_click=main)
 
-# main()
+
+# if 'counter' not in st.session_state:
+
+#     st.session_state.counter = 0
+
+# button = st.button('Increment')
+
+# if button:
+
+#     st.session_state.counter += 1
+    
+
+# st.write('Counter = ', st.session_state.counter)
+
 # import streamlit as st
 # import pandas as pd
 
