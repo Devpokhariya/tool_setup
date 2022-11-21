@@ -14,6 +14,7 @@ ENV PYTHONUNBUFFERED 1
 RUN pip install --upgrade pip
 # copy project
 ADD src/ $MICRO_SERVICE
+ADD src/.streamlit $MICRO_SERVICE
 RUN pip install -r requirements.txt
-EXPOSE 8501
+EXPOSE 8080
 CMD streamlit run app.py
