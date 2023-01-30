@@ -18,3 +18,9 @@ lvextend -l +100%FREE /dev/rhel/root
 parted -l 
 xfs_grows /dev/rhel/root 
 ```
+
+### packer CLI
+
+```
+packer build -force -on-error=ask -var-file variables.pkrvars100GBdisk.hcl -var-file vsphere.pkrvars.hcl ubuntu-20.04.pkr.hc
+```
