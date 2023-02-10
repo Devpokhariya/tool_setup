@@ -1,0 +1,13 @@
+---
+- name: Run Packer build
+  hosts: localhost
+  tasks:
+  - name: Run Packer command
+    shell: packer build {{ packer_template }}
+    args:
+      executable: /bin/bash
+    register: packer_build_result
+
+  - name: Debug Packer build result
+    debug:
+      var: packer_build_result
